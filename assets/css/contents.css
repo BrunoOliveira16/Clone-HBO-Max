@@ -1,0 +1,101 @@
+.contents {
+    margin: 6.25rem auto;
+}
+
+.contents__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.contents__card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 1rem;
+    border: 2px solid transparent;
+
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.contents__card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+}
+
+.contents__card:hover .contents__image {
+    opacity: 0;
+}
+  
+
+.contents__image {
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+/* HBO Content */
+.contents__card:nth-child(1):hover {
+    background-image: url("../images/hbo-hover_0.webp");
+}
+  
+/* Max Originals Content */ 
+.contents__card:nth-child(2):hover {
+    background-image: url("../images/MAX-Hover.webp");
+}
+  
+/* DC Content */
+.contents__card:nth-child(3):hover {
+background-image: url("../images/DC-Hover.webp");
+}
+
+/* WB Content */
+.contents__card:nth-child(4):hover {
+background-image: url("../images/WB-Hover.webp");
+}
+
+/* CN Content */
+.contents__card:nth-child(5):hover {
+background-image: url("../images/CN-Hover.png");
+}
+
+/* Champions League Content */
+.contents__card:nth-child(6):hover {
+background-image: url("../images/UCL-Hover.webp");
+}
+
+@media screen and (max-width: 1200px) {
+    .contents__container {
+        gap: 2rem;
+    }  
+}
+
+@media screen and (max-width: 800px) {
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+
+@media screen and (max-width: 480px) {
+    .contents__container {
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow: auto hidden;
+    }
+}
+
+@media (pointer: coarse) {
+    .contents__card:hover {
+        transform: none;
+    }
+    .subscription__plans:has(.subscription__card:nth-child(1):hover)
+    .subscription__card:nth-child(2),
+    .subscription__plans:has(.subscription__card:nth-child(2):hover)
+    .subscription__card:nth-child(1) {
+    transform: none;
+  }
+}

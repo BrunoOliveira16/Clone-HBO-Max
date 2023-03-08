@@ -1,0 +1,95 @@
+.subscription {
+    background: url(../images/background-movies-series.png);
+    background-size: cover;
+    position: relative;
+}
+
+.subscription__plans {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    margin: 2.5rem 0;
+
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+.subscription__card {
+    min-height: 37.5rem;
+    padding: 2.5rem 3.75rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: var(--card-bg-color);
+    border-radius: .5rem;
+    transition: transform 1s ease-in-out;
+}
+
+.subscription__plan {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.subscription__price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.subscription__description {
+    font-size: 1.25rem;
+    text-align: left;
+    list-style: none;
+
+    margin-bottom: .875rem;
+    padding-left: .875rem;
+}
+
+.subscription__description::marker {
+    content: "+";
+    font-size: 2rem;
+    margin: 0 .5rem 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .subscription__plans {
+        gap: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .subscription__plans {
+        flex-direction: column;
+        align-items: center;
+    }
+    .subscription__card {
+        max-width: 37.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .subscription__card {
+        padding: 2.5rem;
+    }
+    .subscription__plan {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .subscription__price {
+        font-size: 1.5rem;
+    }
+}
+

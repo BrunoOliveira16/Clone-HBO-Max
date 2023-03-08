@@ -1,0 +1,91 @@
+@import url(./vars.css);
+@import url(./global.css);
+@import url(./nav.css);
+@import url(./footer.css);
+@import url(./header.css);
+@import url(./subscription.css);
+@import url(./contents.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+section {
+    scroll-margin-top: 5rem;
+}
+
+p {
+    font-family: "Quicksand", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.button {
+    padding: 1rem 2.5rem;
+
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-color);
+
+    background-color: var(--tertiary-color);
+    border: none;
+    border-radius: 31.25rem;
+
+    cursor: pointer;
+}
+
+.button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+}
+
+.button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.text--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--tertiary-color);
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: var(--secondary-color);
+}

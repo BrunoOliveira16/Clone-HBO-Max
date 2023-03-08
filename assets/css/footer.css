@@ -1,0 +1,38 @@
+.footer__link {
+    margin: 0 .875rem;
+
+    font-size: .875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: var(--link-color);
+
+    transition: color 0.5s;
+}
+
+.footer__link:hover {
+    color: var(--text-color);
+}
+
+.footer__legal {
+    font-size: .75rem !important;
+    color: var(--link-color);
+    margin: 1rem 0;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .footer__link {
+        display: block;
+        margin-bottom: 1rem;
+    }
+    
+}
