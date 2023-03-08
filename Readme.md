@@ -59,7 +59,7 @@ Aplicar os conceitos aprendidos em CSS, utilizando animações, transições, de
 <br>
 
 ## 💻 Demonstração
-Você pode acessar ao resultado final do projeto <a href="https://brunooliveira16.github.io/Formacao-CSS-Web-Developer-DIO/DESAFIO-CSS-MODULO-03/index.html">Clicando aqui</a>.
+Você pode acessar ao resultado final do projeto <a href="https://hbo-max-clone.netlify.app/">Clicando aqui</a>.
 
 <br>
 
